@@ -12,7 +12,7 @@ pipeline {
    stages {
       stage('Build') {
          steps {
-            sh 'docker build -t ${IMAGE_NAME} .'
+            sh 'docker build --pull -t ${IMAGE_NAME} .'
          }
       }
       stage('Push') {
